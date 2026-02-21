@@ -1,3 +1,4 @@
+## Baked-Animation-Rotation-Offsetter
 This is an in-house Python tool developed for Autodesk Maya to resolve rotation offset issues in bat socket joints when exporting baked animations to Unity.
 
 During animation transfer from Maya to Unity, the bat socket exhibited consistent rotational offsets per frame due to coordinate system and transform evaluation differences. This tool corrects that issue by applying a controlled rotation offset on every animation frame, ensuring the final baked animation behaves identically inside Unity.
