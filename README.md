@@ -2,42 +2,38 @@ This is an in-house Python tool developed for Autodesk Maya to resolve rotation 
 
 During animation transfer from Maya to Unity, the bat socket exhibited consistent rotational offsets per frame due to coordinate system and transform evaluation differences. This tool corrects that issue by applying a controlled rotation offset on every animation frame, ensuring the final baked animation behaves identically inside Unity.
 
-##Key Features
+### Key Features
 
-Corrects bat socket rotation offsets on baked animations
+- Corrects bat socket rotation offsets on baked animations
+- Applies per-frame rotation compensation for consistent results
+- Designed for Maya → Unity animation pipelines
+- Works on already baked animation data
+- Simple and artist-friendly Qt-based UI
 
-Applies per-frame rotation compensation for consistent results
+### Technical Details
 
-Designed for Maya → Unity animation pipelines
+- Language: Python
 
-Works on already baked animation data
+- DCC: Autodesk Maya
 
-Simple and artist-friendly Qt-based UI
+- UI Framework: Qt Designer + PySide
 
-Technical Details
+- Animation Handling: Frame-by-frame rotation offset application
 
-Language: Python
+- Target Engine: Unity (baked animation workflow)
 
-DCC: Autodesk Maya
-
-UI Framework: Qt Designer + PySide
-
-Animation Handling: Frame-by-frame rotation offset application
-
-Target Engine: Unity (baked animation workflow)
-
-Use Case
+### Use Case
 
 This tool was originally developed during my internship at Behaviol to fix animation inconsistencies in production assets before exporting to Unity, reducing manual cleanup and re-baking time.
 
-Workflow Overview
+### Workflow Overview
 
-Load the animated asset in Maya
+1. Load the animated asset in Maya
 
-Open the tool via the provided UI
+2. Open the tool via the provided UI
 
-Select the bat socket joint
+3. Select the bat socket joint
 
-Apply the required rotation offset
+4. Apply the required rotation offset
 
-Export baked animation to Unity with corrected transforms
+5. Export baked animation to Unity with corrected transforms
